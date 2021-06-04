@@ -1,0 +1,477 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #fcdaae;
+}
+
+.container {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#insult {
+  padding: 0 16px 16px;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 50px;
+}
+
+#insult .insult-container {
+  display: flex;
+  margin-left: -6px;
+  margin-right: -6px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#insult .word-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  flex: 1;
+  height: 100px;
+  color: #666;
+  background-color: #eee;
+}
+
+#insult .word {
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+#insult .word::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  top: 100%;
+  left: 0;
+}
+
+#insult .word::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 3px + 2px);
+  left: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#insult #adjective {
+  min-width: 50px;
+}
+
+#insult #adjective::before {
+  background-color: #bf6af0;
+}
+
+#insult #adjective::after {
+  content: 'adjective';
+  color: #bf6af0;
+}
+
+#insult #curse-word {
+  min-width: 70px;
+}
+
+#insult #curse-word::before {
+  background-color: #f0b66a;
+}
+
+#insult #curse-word::after {
+  content: 'curse word';
+  color: #f0b66a;
+}
+
+#insult #noun {
+  min-width: 30px;
+}
+
+#insult #noun::before {
+  background-color: #6accf0;
+}
+
+#insult #noun::after {
+  content: 'noun';
+  color: #6accf0;
+}
+
+button {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  padding: 8px 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin: 0 10px;
+  height: 45px;
+  background-color: #332a7c;
+  color: white;
+}
+
+button:hover {
+  color: white;
+  background-color: #1a1163;
+  border-color: white;
+  cursor: pointer;
+}
+
+textarea {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+body.retro {
+  font-family: 'Chilanka', cursive;
+  color: blue;
+  background-image: url(https://i.imgur.com/XupMG0U.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 600px) {
+  .retro .container {
+    max-width: 600px;
+  }
+}
+
+.theme-switch {
+  padding: 8px 24px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.retro .theme-switch {
+  color: blue;
+  border: 2px solid blue;
+  background-color: #adadad;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+}
+
+.retro .theme-switch:hover {
+  color: yellow;
+  border-color: yellow;
+}
+
+.title-container {
+  padding: 20px 20px 10px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.title-container h1 {
+  color: #332a7c;
+}
+
+.retro .title-container {
+  border-radius: 0;
+  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  border-width: 5px;
+  border-style: ridge;
+  background-color: #adadad;
+}
+
+.title-container h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.flex {
+  flex: 1;
+}
+
+.retro .title-container h1 {
+  background-image: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: gradient 5s linear infinite;
+}
+
+.retro #insult {
+  border-radius: 0;
+  border-color: blue;
+  border-width: 3px;
+  background-color: transparent;
+  border-style: double;
+  padding: 16px 0;
+  border: none;
+  margin-bottom: 50px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.retro #insult .insult-container {
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.retro #insult .insult-container .word-container {
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  background-color: #adadad;
+  padding: 10px 10px 5px;
+  margin: 0;
+  color: blue;
+  text-transform: lowercase;
+  text-decoration: underline;
+  font-weight: normal;
+  font-family: 'Chilanka', cursive;
+  border-width: 5px;
+  flex: 1;
+}
+
+.retro #insult .insult-container .word-container .word {
+  text-decoration: underline;
+  padding-bottom: 0;
+  margin-top: 0;
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+.retro #insult .insult-container .word-container .word::before {
+  content: none;
+  background-color: blue !important;
+}
+
+.retro #insult .insult-container .word-container .word::after {
+  color: blue !important;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  top: 100%;
+}
+
+.retro #insult .insult-container .word-container:hover .word {
+  color: yellow !important;
+}
+
+.retro #insult .insult-container .word-container:hover .word::after {
+  color: yellow !important;
+}
+
+.retro button {
+  border-radius: 0;
+  color: blue;
+  text-transform: lowercase;
+  text-decoration: underline;
+  font-weight: normal;
+  font-family: 'Chilanka', cursive;
+  border: 5px solid;
+  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  background-color: #adadad;
+  transition: none;
+  margin: 0;
+}
+
+.retro button:hover {
+  color: yellow;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+}
+
+.retro .buttons {
+  max-width: 420px;
+}
+
+#copy .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  text-align: center;
+  border-radius: 0;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.retro #copy .tooltiptext {
+  background-color: #adadad;
+  text-decoration: underline;
+  color: blue;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid blue;
+  animation: rotate 0.5s infinite steps(1, start);
+  animation-direction: alternate;
+}
+
+.retro #copy .tooltiptext.active {
+  color: yellow;
+  border-color: yellow;
+}
+
+#copy .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.retro #copy .tooltiptext::after {
+  content: none;
+}
+
+#copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.buttons button {
+  height: 45px;
+}
+
+.retro #generate {
+  flex: 1;
+}
+
+#copy {
+  width: 45px;
+  position: relative;
+  padding: 8px 4px 10px;
+}
+
+.retro #copy {
+  padding: 2px 2px 4px;
+}
+
+#copy svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  fill: white;
+}
+
+.retro #copy svg {
+  fill: blue;
+}
+
+.retro #copy:hover svg {
+  fill: yellow;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+}

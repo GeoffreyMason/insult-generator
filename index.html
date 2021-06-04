@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chilanka&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js"></script>
+  </head>
+  <body onload="onLoad()" class="loading">
+    <div class="container">
+      <div class="content">
+        <div class="lds-ripple retro-hidden">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="title-container">
+          <h1>Insult Generator</h1>
+        </div>
+        <div id="insult">
+          <div class="insult-container">
+            <button
+              class="word-container adjective"
+              onclick="generateAdjective()"
+            >
+              <p id="adjective" class="word">adjective</p>
+              <p class="word-label retro-hidden">adjective</p>
+            </button>
+            <button
+              class="word-container curse-word"
+              onclick="generateCurseWord()"
+            >
+              <p id="curse-word" class="word">curse word</p>
+              <p class="word-label retro-hidden">curse word</p>
+            </button>
+            <button class="word-container noun" onclick="generateNoun()">
+              <p id="noun" class="word">noun</p>
+              <p class="word-label retro-hidden">noun</p>
+            </button>
+          </div>
+          <div class="insult-meter-container">
+            <div class="insult-meter-background">
+              <div id="insult-meter">
+                <div class="insult-meter-fill"></div>
+              </div>
+            </div>
+            <h3 id="insult-severity">Critical insult</h3>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="generate" onclick="generateInsult()">Generate</button>
+          <button
+            id="copy"
+            onclick="copyClipboard()"
+            onmouseleave="resetClipboard()"
+          >
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              width="93.842px"
+              height="93.843px"
+              viewBox="0 0 93.842 93.843"
+              style="enable-background: new 0 0 93.842 93.843"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M74.042,11.379h-9.582v-0.693c0-1.768-1.438-3.205-3.206-3.205h-6.435V3.205C54.819,1.437,53.381,0,51.614,0H42.23   c-1.768,0-3.206,1.438-3.206,3.205V7.48H32.59c-1.768,0-3.206,1.438-3.206,3.205v0.693h-9.582c-2.393,0-4.339,1.945-4.339,4.34   v73.785c0,2.394,1.946,4.34,4.339,4.34h54.238c2.394,0,4.339-1.946,4.339-4.34V15.719C78.38,13.324,76.434,11.379,74.042,11.379z    M32.617,25.336h28.61c1.709,0,3.102-1.391,3.102-3.1v-3.438h7.554l0.021,68.164l-49.939,0.021V18.801h7.554v3.436   C29.517,23.945,30.907,25.336,32.617,25.336z"
+                />
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+          </button>
+        </div>
+        <textarea id="clipboard"></textarea>
+      </div>
+      <div class="flex hidden">
+        <h1>Insult Generator</h1>
+      </div>
+      <button class="theme-switch" onclick="toggleTheme()">Switch theme</button>
+    </div>
+  </body>
+</html>
