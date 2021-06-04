@@ -421,7 +421,7 @@ body {
 }
 
 #insult .word-container.adjective .word-label {
-  background-color: #332a7c !important;
+  background-color: #332a7c;
 }
 
 #insult .word-container.curse-word .word-label {
@@ -429,7 +429,7 @@ body {
 }
 
 #insult .word-container.noun .word-label {
-  background-color: #332a7c !important;
+  background-color: #332a7c;
 }
 
 #insult .word {
