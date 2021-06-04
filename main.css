@@ -74,7 +74,6 @@ body {
   z-index: 11;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
 }
 
 .retro .lds-spinner {
@@ -85,6 +84,12 @@ body {
 
 .loading.retro .lds-spinner {
   opacity: 1;
+}
+
+.loading.retro .content .title-container,
+.loading.retro .content #insult,
+.loading.retro .content .buttons {
+  visibility: hidden;
 }
 
 .lds-spinner div {
@@ -297,6 +302,7 @@ body {
   border-width: 5px;
   border-style: ridge;
   background-color: #adadad;
+  font-weight: 400;
 }
 
 .retro .insult-meter-container {
