@@ -1,1 +1,1 @@
-"# insult-generator" 
+# Insult Generator 
