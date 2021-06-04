@@ -14,6 +14,56 @@ body {
   background: #fcdaae;
 }
 
+.severity-level-selectors {
+  margin-left: -5px;
+  margin-right: -5px;
+  display: flex;
+}
+
+.severity-level-selectors button {
+  background-color: grey;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1;
+}
+
+#any.active,
+#any:hover {
+  background-color: #332a7c;
+}
+
+#minor.active,
+#minor:hover {
+  background-color: #9ee493;
+}
+
+#moderate.active,
+#moderate:hover {
+  background-color: #f0d76a;
+}
+
+#serious.active,
+#serious:hover {
+  background-color: #f0b66a;
+}
+
+#critical.active,
+#critical:hover {
+  background-color: #f25767;
+}
+
+.retro .severity-level-selectors button.active,
+.retro .severity-level-selectors button:hover {
+  background-color: #adadad !important;
+  color: yellow;
+}
+
+.retro .severity-level-selectors button.active {
+  background-color: #adadad !important;
+  color: yellow;
+  border-style: inset;
+}
+
 .lds-ripple {
   display: inline-block;
   position: absolute;
@@ -255,9 +305,8 @@ body {
 }
 
 .insult-meter-container {
-  margin-top: 40px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .insult-meter-background {
@@ -283,12 +332,12 @@ body {
   width: calc(5% - 4px);
   margin-left: 2px;
   margin-right: 2px;
-  background-color: blue !important;
+  background-color: blue;
+  filter: saturate(5);
 }
 
 .insult-meter-container #insult-severity {
   color: #f25767;
-  margin-bottom: 0;
 }
 
 .retro .insult-meter-container #insult-severity {
@@ -297,13 +346,14 @@ body {
   padding: 5px 10px;
   text-decoration: underline;
   font-size: 20px;
-  color: blue !important;
+  color: blue;
   border-radius: 0;
   border-color: #cbcbcb;
   border-width: 5px;
   border-style: ridge;
   background-color: #adadad;
   font-weight: 400;
+  filter: saturate(5);
 }
 
 .retro .insult-meter-container {
@@ -326,18 +376,16 @@ body {
   padding: 0 16px 16px;
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 560px;
+  max-width: 600px;
   margin-bottom: 50px;
 }
 
 #insult .insult-container {
   display: flex;
-  margin-left: -6px;
-  margin-right: -6px;
+  margin-left: -16px;
+  margin-right: -16px;
   justify-content: center;
   align-items: center;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 #insult .word-container {
@@ -373,7 +421,7 @@ body {
 }
 
 #insult .word-container.adjective .word-label {
-  background-color: #bf6af0;
+  background-color: #332a7c !important;
 }
 
 #insult .word-container.curse-word .word-label {
@@ -381,7 +429,7 @@ body {
 }
 
 #insult .word-container.noun .word-label {
-  background-color: #6accf0;
+  background-color: #332a7c !important;
 }
 
 #insult .word {
@@ -605,7 +653,7 @@ body.retro {
   padding: 16px 0;
   border: none;
   margin-bottom: 50px;
-  max-width: 460px;
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -620,8 +668,8 @@ body.retro {
 
 .retro #insult .insult-container .word-container {
   border-radius: 0;
-  border: 2px solid;
-  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  border: 2px outset;
+  border-color: #cbcbcb;
   background-color: #adadad;
   padding: 10px 10px 5px;
   margin: 0;
@@ -674,8 +722,8 @@ body.retro {
   text-decoration: underline;
   font-weight: normal;
   font-family: 'Chilanka', cursive;
-  border: 5px solid;
-  border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+  border: 5px outset;
+  border-color: #cbcbcb;
   background-color: #adadad;
   transition: none;
   margin: 0;

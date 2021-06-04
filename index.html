@@ -7,7 +7,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./main.css" />
-    <script src="./main.js"></script>
+    <script type="text/javascript" src="scripts/adjectives.js"></script>
+    <script type="text/javascript" src="scripts/curse-words.js"></script>
+    <script type="text/javascript" src="scripts/nouns.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body onload="onLoad()" class="loading">
     <div class="container">
@@ -55,12 +58,49 @@
             </button>
           </div>
           <div class="insult-meter-container">
+            <h3 id="insult-severity">Critical insult</h3>
             <div class="insult-meter-background">
               <div id="insult-meter">
                 <div class="insult-meter-fill"></div>
               </div>
             </div>
-            <h3 id="insult-severity">Critical insult</h3>
+          </div>
+          <div class="severity-level-selectors">
+            <button
+              id="any"
+              class="severity-level-button"
+              onclick="sortWords('any')"
+            >
+              Any
+            </button>
+            <button
+              id="minor"
+              class="severity-level-button"
+              onclick="sortWords('minor')"
+            >
+              Minor
+            </button>
+            <button
+              id="moderate"
+              class="severity-level-button"
+              onclick="sortWords('moderate')"
+            >
+              Moderate
+            </button>
+            <button
+              id="serious"
+              class="severity-level-button"
+              onclick="sortWords('serious')"
+            >
+              Serious
+            </button>
+            <button
+              id="critical"
+              class="severity-level-button"
+              onclick="sortWords('critical')"
+            >
+              Critical
+            </button>
           </div>
         </div>
         <div class="buttons">
